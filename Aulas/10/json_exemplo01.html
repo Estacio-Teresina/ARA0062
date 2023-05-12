@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Exemplo JSON</h2>
+        <p>
+            Nome: <span id="nome"></span><br>
+            Sobrenome: <span id="sobrenome"></span><br>
+        </p>
+        <script>
+            var txt = '[{"nome": "Fulano", "sobrenome": "Silva"},';
+            txt = txt + ' {"nome": "Cicrano", "sobrenome": "Nogueira"}]';
+
+            var array = JSON.parse(txt);
+
+            document.getElementById("nome").innerHTML = array[0].nome;
+            document.getElementById("sobrenome").innerHTML = array[0].sobrenome;
+        </script>
+    </body>
+</html>
